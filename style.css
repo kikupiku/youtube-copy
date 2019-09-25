@@ -1,0 +1,19 @@
+.top-left,
+.search-bar,
+.top-right {
+  display: inline-block;
+  height: 50px;
+}
+
+.icon {
+  height: 20px;
+  opacity: 0.7;
+}
+
+.user-icon {
+  height: 40px;
+}
+
+.yt-logo {
+  height: 50px;
+}
