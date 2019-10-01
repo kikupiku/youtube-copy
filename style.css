@@ -24,17 +24,20 @@ header {
 
 .search-bar {
   border: 1px solid lightgrey;
+  display: inline-block;
   width: 52.5%;
   height: 32px;
 }
 
 .search-field {
-  width: 80%;
+  width: 78%;
   height: 100%;
+  display: inline-block;
 }
 
-.search-button {
-  border-left: 1px solid lightgrey;
+.search-button-box {
+  border: 1px solid lightgrey;
+  display: inline-block;
   width: 20%;
   height: 100%;
 }
@@ -64,13 +67,22 @@ aside {
   opacity: 0.7;
 }
 
+.yt-logo,
+.search-bar,
+.icon-main  {
+  vertical-align: middle;
+}
+
+
+
 .search-button img {
   transform: translateX(50%);
-  transform: translateY(-50%);
+  transform: translateY(50%);
 }
 
 .user-icon {
   height: 40px;
+  vertical-align: middle;
 }
 
 .under-vid-strip img,
@@ -81,4 +93,58 @@ aside {
 
 .yt-logo {
   height: 50px;
+}
+
+.video-container {
+  border: 1px green solid;
+  width: 60%;
+  min-height: 400px;
+  margin-left: 30px;
+}
+
+iframe {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* ASIDE----------------------------------------------------------- */
+
+main {
+  border: 1px red solid;
+}
+
+aside {
+  border: 1px green solid;
+}
+
+.up-next {
+  margin-bottom: 15px;
+  vertical-align: top;
+}
+
+.up-next-right {
+  float: right;
+}
+
+.up-next img {
+  display: inline-block;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.side-bar img {
+  height: 90px;
+  width: 160px;
+}
+
+.side-vid-description,
+.side-bar img {
+  display: inline-block;
 }
