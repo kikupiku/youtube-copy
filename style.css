@@ -1,13 +1,59 @@
-/* * {
-  border: 1px green solid;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing:    border-box;
-  box-sizing:         border-box;
-} */
+/* CSS RESET FROM MEYERWEB.COM----------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/* TOP STRIP-------------------------------------------------------- */
 
 header {
   width: 100%;
   margin-bottom: 40px;
+  margin-top: 5px;
 }
 
 .top-left,
@@ -16,10 +62,12 @@ header {
   box-sizing: content-box;
   display: inline-block;
   height: 50px;
+  padding-right: 10px;
 }
 
 .top-left {
-  width: 20.5%;
+  width: 20%;
+  padding-left: 10px;
 }
 
 .search-bar {
@@ -40,6 +88,8 @@ header {
   display: inline-block;
   width: 20%;
   height: 100%;
+  float: right;
+  vertical-align: top;
 }
 
 .top-right {
@@ -50,14 +100,33 @@ header {
 .top-right img {
 padding-left: 20px;
 }
-aside {
-  float: right;
-  width: 30%;
+
+/* MAIN VIDEO AREA----------------------------------------------------- */
+
+.video-container {
+  position: relative;
+  padding-bottom: 54%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+
 }
 
 .under-vid-strip {
   display: inline-block;
   height: 50px;
+}
+
+main {
+  border: 1px red solid;
+  min-width: 560px;
 }
 
 /* ICONS----------------------------------------------------- */
@@ -72,7 +141,6 @@ aside {
 .icon-main  {
   vertical-align: middle;
 }
-
 
 
 .search-button img {
@@ -95,19 +163,6 @@ aside {
   height: 50px;
 }
 
-.video-container {
-  border: 1px green solid;
-  width: 60%;
-  min-height: 400px;
-  margin-left: 30px;
-}
-
-iframe {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
 .author img {
   border-radius: 50%;
   width: 50px;
@@ -116,12 +171,11 @@ iframe {
 
 /* ASIDE----------------------------------------------------------- */
 
-main {
-  border: 1px red solid;
-}
 
 aside {
   border: 1px green solid;
+  float: right;
+  width: auto;
 }
 
 .up-next {
@@ -147,4 +201,28 @@ aside {
 .side-vid-description,
 .side-bar img {
   display: inline-block;
+  vertical-align: top;
+}
+
+.side-vid-description {
+  width: 300px;
+  position: relative;
+
+}
+
+.title {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.youtuber,
+.views {
+  font-size: 13px;
+  color: grey;
+  padding-bottom: 8px;
 }
