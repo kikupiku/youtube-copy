@@ -57,7 +57,6 @@ header {
 }
 
 .top-left,
-.search-bar,
 .top-right {
   box-sizing: content-box;
   display: inline-block;
@@ -72,23 +71,26 @@ header {
 
 .search-bar {
   border: 1px solid lightgrey;
+  box-sizing: border-box;
   display: inline-block;
   width: 52.5%;
   height: 32px;
 }
 
 .search-field {
-  width: 78%;
+  width: calc(100% - 80px);
   height: 100%;
   display: inline-block;
+  box-sizing: border-box;
 }
 
 .search-button-box {
-  border: 1px solid lightgrey;
+  background: #F8F8F8;
+  box-sizing: border-box;
+  border-left: 1px solid lightgrey;
   display: inline-block;
-  width: 20%;
+  width: 76px;
   height: 100%;
-  float: right;
   vertical-align: top;
 }
 
@@ -101,80 +103,6 @@ header {
 padding-left: 20px;
 }
 
-/* MAIN VIDEO AREA----------------------------------------------------- */
-
-.video-container {
-  position: relative;
-  padding-bottom: 54%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  z-index: 1;
-}
-
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60%;
-  height: 60%;
-
-}
-
-.under-vid-strip {
-  display: inline-block;
-  height: 50px;
-}
-
-main {
-  min-width: 560px;
-}
-
-/* ICONS----------------------------------------------------- */
-
-.icon-main {
-  cursor: pointer;
-  height: 20px;
-  opacity: 0.7;
-}
-
-.yt-logo,
-.search-bar,
-.icon-main  {
-  vertical-align: middle;
-}
-
-
-.search-button img {
-  transform: translateX(50%);
-  transform: translateY(50%);
-}
-
-.user-icon {
-  height: 40px;
-  vertical-align: middle;
-}
-
-.under-vid-strip img,
-.under-vid-strip p {
-  height: 25px;
-  opacity: 0.5;
-}
-
-.yt-logo {
-  height: 50px;
-}
-
-.author img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-img {
-  position: relative;
-  cursor: pointer;
-}
-
 /* ASIDE----------------------------------------------------------- */
 
 
@@ -182,7 +110,7 @@ aside {
   margin-left: 10px;
   z-index: 10;
   float: right;
-  width: auto;
+  max-width: 38vw;
 }
 
 .up-next {
@@ -234,13 +162,12 @@ aside {
 .side-vid-description {
   cursor: pointer;
   position: relative;
-  width: 300px;
+  overflow: hidden;
 }
 
 .title {
   position: relative;
   overflow: hidden;
-  width: auto;
   height: auto;
   font-weight: bold;
   font-size: 14px;
@@ -254,8 +181,215 @@ aside {
   padding-bottom: 8px;
 }
 
-/* TODO: figure out search bar button
-figure out vertical alignment of up next
-figure out why z-index doesn't seem to work on main video container
-whole video description section
+/* MAIN VIDEO AREA----------------------------------------------------- */
+
+.main-video {
+  margin-left: 15px;
+}
+.wrapper {
+  width: 60%;
+  margin-bottom: 15px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 54%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+h1  {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.under-vid-strip:not(.right) {
+  border-bottom: 1px lightgrey solid;
+  margin-bottom: 15px;
+  padding-bottom: 25px;
+  width: 58%;
+}
+
+.under-vid-strip > * {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  color: grey;
+}
+
+.right {
+  float: right;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.right > *:not(.to-be-bold),
+.to-be-bold > * {
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.to-be-bold {
+  box-sizing: border-box;
+  border-bottom: 2px grey solid;
+  height: 42px;
+  vertical-align: top;
+}
+
+main {
+  min-width: 560px;
+}
+
+/* DESCRIPTION BOX-------------------------------------------- */
+
+.description-box {
+  margin-left: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px lightgrey solid;
+  width: 58%;
+}
+
+.avatar-wrapper,
+.description {
+  display: inline-block;
+  height: 150px;
+  vertical-align: middle;
+}
+
+.avatar-wrapper {
+  margin-right: 10px;
+}
+
+.youtuber-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.subscribers-no {
+  font-size: 13px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.subscribe-box {
+  background-color: #CC0000;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.description :nth-child(3) {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.show-more {
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* COMMENT SECTION-------------------------------------------- */
+
+.comment-section {
+  margin-left: 15px;
+}
+
+.above-comments > * {
+
+}
+
+.like-line span,
+.like-line img{
+  height: 15px;
+  opacity: 0.5;
+  padding-right: 10px;
+}
+
+.comment p {
+  font-size: 14px;
+}
+
+/* ICONS----------------------------------------------------- */
+
+.icon-main {
+  height: 20px;
+  opacity: 0.7;
+}
+
+.yt-logo,
+.search-bar,
+.icon-main  {
+  vertical-align: middle;
+}
+
+#search-button {
+  height: 15px;
+  transform: translate(200%, 50%);
+}
+
+.user-icon {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.under-vid-strip p,
+.right img,
+.to-be-bold img,
+.to-be-bold p,
+.sort img {
+  height: 18px;
+  opacity: 0.5;
+}
+
+/* .like-line img,
+.reply-line img {
+  height: 18px;
+  opacity: 0.5;
+} */
+
+.yt-logo {
+  height: 50px;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+img {
+  position: relative;
+  cursor: pointer;
+}
+
+.comment-avatar {
+  height: 42px;
+}
+
+.user-icon img {
+  border-radius: 50%;
+  height: 42px;
+}
+
+/* TODO:
 whole comment section*/

@@ -6,6 +6,8 @@
     <link rel="shortcut icon" href="./images/youtube-icon.ico">
     <link rel="stylesheet" href="style.css">
   </head>
+
+
   <body>
     <header>
       <div class="top-left">
@@ -15,7 +17,7 @@
       <div class="search-bar">
         <form class="search-field" action="index.html" method="post"></form>
         <div class="search-button-box">
-          <img class="icon-main search-button" src="./images/search.png" alt="search button">
+          <img id="search-button" src="./images/search.png" alt="search button">
         </div>
       </div>
       <div class="top-right">
@@ -26,6 +28,8 @@
         <img class="user-icon" src="./images/user-icon.png" alt="user icon">
       </div>
     </header>
+
+
     <main>
       <aside>
         <div class="up-next">
@@ -197,149 +201,146 @@
         </div>
         <p></p>
       </aside>
+
+
       <section class="main-video">
-        <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/st8-EY71K84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <!-- add ?autoplay=1&;enablejsapi=1 to autoplay -->
+        <div class="wrapper">
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/st8-EY71K84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- ?autoplay=1&;enablejsapi=1 -->
+          </div>
         </div>
         <h1>True Facts About The Octopus</h1>
         <div class="under-vid-strip">
             <h3>12,162,668 views</h3>
-            <img src="./images/like.png" alt="like button">
-            <span>148K</span>
-            <img src="./images/dislike.png" alt="dislike button">
-            <span>1.8K</span>
-            <img src="./images/share.png" alt="share icon">
-            <span>SHARE</span>
-            <img src="./images/add-to-playlist.png" alt="add to playlist">
-            <span>SAVE</span>
-            <img src="./images/three-dots.png" alt="more options">
+            <div class="under-vid-strip right">
+              <div class="to-be-bold">
+                <img src="./images/like.png" alt="like button">
+                <span>148K</span>
+                <img src="./images/dislike.png" alt="dislike button">
+                <span>1.8K</span>
+              </div>
+              <img src="./images/share.png" alt="share icon">
+              <span>SHARE</span>
+              <img src="./images/add-to-playlist.png" alt="add to playlist">
+              <span>SAVE</span>
+              <img src="./images/three-dots.png" alt="more options">
+            </div>
         </div>
       </section>
+
+
       <section class="description-box">
         <div class="author">
-          <img src="./images/zefrank.jpg" alt="icon of the author's youtube channel">
-          <p class="youtuber-name">zefrank1</p>
-          <p class="subscribers-no">2.53M subscribers</p>
+          <div class="avatar-wrapper">
+            <img src="./images/zefrank.jpg" alt="icon of the author's youtube channel">
+          </div>
+          <div class="description">
+            <p class="youtuber-name">zefrank1</p>
+            <p class="subscribers-no">2.53M subscribers</p>
+            <p>music: <a href="http://www.soundcloud.com/querflote" target="_blank">http://www.soundcloud.com/querflote</a> <br><br>Special thanks to the Monterey Bay Aquarium</p>
+            <p class="show-more">SHOW MORE</p>
+          </div>
+          <div class="subscribe-box">
+            SUBSCRIBE
+          </div>
         </div>
-        <div class="subscribe-box">
-          <p>SUBSCRIBE</p>
-        </div>
-        <p>music: http://www.soundcloud.com/querflote <br><br>Special thanks to the Monterey Bay Aquarium</p>
-        <p class="show-more">SHOW MORE</p>
       </section>
+
+
       <section class="comment-section">
         <div class="above-comments">
           <span>6,707 comments</span>
-          <div class="icon-main">
+          <div class="sort">
             <img src="./images/sort.png" alt="sort icon">
             <span>SORT BY</span>
           </div>
         </div>
+
         <div class="adding-comments">
-          <img src="./images/user-icon" alt="user icon">
+          <img class="comment-avatar" src="./images/user-icon.png" alt="user icon">
           <form class="add-comment" action="index.html" method="post">
             Add a public comment...
           </form>
         </div>
         <div class="comment">
           <div class="user-icon">
-
+            <img src="./images/commenter-avatars/lord-topaz.jpg" alt="lord topaz avatar">
           </div>
           <div class="top-line">
-            <span class="user-name"></span>
-            <span class="posted-ago"></span>
+            <span class="user-name">told topaz</span>
+            <span class="posted-ago">10 months ago</span>
           </div>
-          <p class="content"></p>
+          <p class="content">This guy has the comedy talent of George carlin <br><br>But the voice of Morgan freeman<br><br>A perfect mix</p>
           <div class="like-line">
             <img src="./images/like.png" alt="like button">
-            <span class="likes-number"></span>
+            <span class="likes-number">3.8K</span>
             <img src="./images/dislike.png" alt="dislike button">
             <span>REPLY</span>
-          </div>
-          <div class="reply-line">
-            <span>View replies </span>
-            <img src="./images/down.png" alt="down arrow">
           </div>
         </div>
         <div class="comment">
           <div class="user-icon">
-
+            <img src="./images/commenter-avatars/earthly-blur.jpg" alt="">
           </div>
           <div class="top-line">
-            <span class="user-name"></span>
-            <span class="posted-ago"></span>
+            <span class="user-name">EarthlyBlur</span>
+            <span class="posted-ago">4 years ago</span>
           </div>
-          <p class="content"></p>
+          <p class="content">"deeps in the depths of the o-c-an" <br>me: * immediately subscribes *</p>
           <div class="like-line">
             <img src="./images/like.png" alt="like button">
-            <span class="likes-number"></span>
+            <span class="likes-number">529</span>
             <img src="./images/dislike.png" alt="dislike button">
             <span>REPLY</span>
-          </div>
-          <div class="reply-line">
-            <span>View replies </span>
-            <img src="./images/down.png" alt="down arrow">
           </div>
         </div>
         <div class="comment">
           <div class="user-icon">
-
+            <img src="./images/commenter-avatars/thomas-saisani.jpg" alt="">
           </div>
           <div class="top-line">
-            <span class="user-name"></span>
-            <span class="posted-ago"></span>
+            <span class="user-name">Thomas SAISANI</span>
+            <span class="posted-ago">5 months ago</span>
           </div>
-          <p class="content"></p>
+          <p class="content">"One floating duck does not a children's story make."<br><br>Gold</p>
           <div class="like-line">
             <img src="./images/like.png" alt="like button">
-            <span class="likes-number"></span>
+            <span class="likes-number">578</span>
             <img src="./images/dislike.png" alt="dislike button">
             <span>REPLY</span>
-          </div>
-          <div class="reply-line">
-            <span>View replies </span>
-            <img src="./images/down.png" alt="down arrow">
           </div>
         </div>
         <div class="comment">
           <div class="user-icon">
-
+            <img src="./images/commenter-avatars/oozephyroo.jpg" alt="">
           </div>
           <div class="top-line">
-            <span class="user-name"></span>
-            <span class="posted-ago"></span>
+            <span class="user-name">oOzephyrOo</span>
+            <span class="posted-ago">1 year ago</span>
           </div>
-          <p class="content"></p>
+          <p class="content">"Look a bit like an alien got freaky with a weather balloon" - i literally spit my water out</p>
           <div class="like-line">
             <img src="./images/like.png" alt="like button">
-            <span class="likes-number"></span>
+            <span class="likes-number">1.1K</span>
             <img src="./images/dislike.png" alt="dislike button">
             <span>REPLY</span>
-          </div>
-          <div class="reply-line">
-            <span>View replies </span>
-            <img src="./images/down.png" alt="down arrow">
           </div>
         </div>
         <div class="comment">
           <div class="user-icon">
-
+            <img src="./images/commenter-avatars/plague-of-gripes.jpg" alt="">
           </div>
           <div class="top-line">
-            <span class="user-name"></span>
-            <span class="posted-ago"></span>
+            <span class="user-name">PlagueOfGripes</span>
+            <span class="posted-ago">5 years ago</span>
           </div>
-          <p class="content"></p>
+          <p class="content">You should have mentioned how smaller males will pretend to be women to get past the bouncer males and into clubs, where the actual lady octupii are so impressed that they have horrible octosex with the nerds, right there on the dance floor. It's super hot and scream-worthy.</p>
           <div class="like-line">
             <img src="./images/like.png" alt="like button">
-            <span class="likes-number"></span>
+            <span class="likes-number">302</span>
             <img src="./images/dislike.png" alt="dislike button">
             <span>REPLY</span>
-          </div>
-          <div class="reply-line">
-            <span>View replies </span>
-            <img src="./images/down.png" alt="down arrow">
           </div>
         </div>
         </section>
